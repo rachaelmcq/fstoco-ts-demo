@@ -50,7 +50,7 @@ describe("SnackRepository", () => {
       const snack = await ctx.repos.snacks.insert({ name: "Baz" });
       const vote = await ctx.repos.votes.insert({ snackId: snack.id });
 
-      const voteSnack = await ctx.repos.snacks.forVote.load(vote);
+      const voteSnack = await ctx.repos.snacks.forVote.load(vote as any);
       expect(voteSnack.id).toEqual(snack.id);
     })
   );

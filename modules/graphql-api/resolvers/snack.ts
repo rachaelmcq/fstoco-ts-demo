@@ -7,14 +7,22 @@ export interface MinimalSnack {
 }
 
 export const SnackResolvers = {
-  async name(snack: MinimalSnack, args: {}, context: Context) {
+  async name(
+    snack: MinimalSnack,
+    args: {},
+    context: Context
+  ): Promise<Snack["name"]> {
     if ((snack as any).name) return (snack as any).name;
 
     const record = await context.repos.snacks.findById.load(snack.id);
     return record && record.name;
   },
 
-  async voteCount(snack: MinimalSnack, args: {}, context: Context) {
+  async voteCount(
+    snack: MinimalSnack,
+    args: {},
+    context: Context
+  ): Promise<Snack["voteCount"]> {
     return await context.repos.votes.countForSnack.load(snack.id);
   }
 };

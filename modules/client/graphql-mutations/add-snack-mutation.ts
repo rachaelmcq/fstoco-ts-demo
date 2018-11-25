@@ -8,22 +8,21 @@ const MUTATION = require("./AddSnack.graphql");
 
 export function addSnackMutation(
   apolloClient: ApolloClient<any>,
-  snack: { name: string }
+  snack: AddSnackMutationVariables
 ) {
-  const name = snack.name;
   return apolloClient.mutate<AddSnackMutation>({
     mutation: MUTATION,
 
-    variables: { name } as AddSnackMutationVariables,
+    variables: snack,
 
     optimisticResponse: {
       addSnack: {
         __typename: "Snack",
         id: -1,
-        name,
+        name: snack.name,
         voteCount: 0
       }
-    } as AddSnackMutation,
+    },
 
     refetchQueries: ["DashboardSnacks"]
   });
