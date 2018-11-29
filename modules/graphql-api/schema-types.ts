@@ -8,7 +8,10 @@ export interface Snack {
   id: number;
   name: string;
   voteCount: number;
+  flavor: Flavor;
 }
+
+export type Flavor = "salty" | "sweet";
 
 export interface Mutation {
   addSnack: Snack | null;
@@ -17,6 +20,7 @@ export interface Mutation {
 
 export interface AddSnackMutationArgs {
   name: string;
+  flavor: Flavor;
 }
 
 export interface VoteForMutationArgs {

@@ -8,11 +8,12 @@ export type SnackVoteInfo = {
   readonly name: string;
   readonly voteCount: number;
 };
-export interface SnackVoterProps {
+
+export type SnackVoterProps = {
   readonly popularityMode: PopularityMode;
   readonly snacks: null | ReadonlyArray<SnackVoteInfo>;
   readonly onVote: (snack: SnackVoteInfo) => void;
-}
+};
 
 export const calcPopularityPercentage = (
   snackVotes: number,
@@ -23,11 +24,11 @@ export const calcPopularityPercentage = (
   return `${percentage}%`;
 };
 
-export interface SnackVoterEntryProps {
+export type SnackVoterEntryProps = {
   name: string;
   popularityDesc: string;
   onVote: () => void;
-}
+};
 
 export const SnackVoterEntry: React.SFC<SnackVoterEntryProps> = props => (
   <li>

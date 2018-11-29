@@ -5,3 +5,10 @@ mutation AddSnack($name: String!) {
     voteCount
   }
 }
+# mutation AddSnack($name: String!, $flavor: Flavor!) {
+#   addSnack(name: $name, flavor: $flavor) {
+#     id
+#     name
+#     voteCount
+#   }
+# }

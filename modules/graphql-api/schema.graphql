@@ -2,6 +2,12 @@ type Snack {
   id: Int!
   name: String!
   voteCount: Int!
+  # flavor: Flavor!
+}
+
+enum Flavor {
+  salty
+  sweet
 }
 
 type Vote {
@@ -15,5 +21,6 @@ type Query {
 
 type Mutation {
   addSnack(name: String!): Snack
+  # addSnack(name: String!, flavor: Flavor!): Snack
   voteFor(snackId: Int!): Vote
 }
