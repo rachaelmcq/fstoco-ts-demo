@@ -1,18 +1,11 @@
 /* tslint:disable */
 //  This file was automatically generated and should not be edited.
 
-export enum Flavor {
-  salty = "salty",
-  sweet = "sweet"
-}
-
 export interface AddSnackMutationVariables {
   name: string;
-  flavor: Flavor;
 }
 
 export interface AddSnackMutation {
-  // addSnack(name: String!): Snack
   addSnack: {
     id: number;
     name: string;
@@ -25,6 +18,7 @@ export interface VoteForSnackMutationVariables {
 }
 
 export interface VoteForSnackMutation {
+  // addSnack(name: String!, flavor: Flavor!): Snack
   voteFor: {
     __typename: "Vote";
     id: number;

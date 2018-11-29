@@ -30,14 +30,16 @@ export type SnackVoterEntryProps = {
   onVote: () => void;
 };
 
-export const SnackVoterEntry: React.SFC<SnackVoterEntryProps> = props => (
+export const SnackVoterEntry: (
+  props: SnackVoterEntryProps
+) => JSX.Element = props => (
   <li>
     {props.name}&nbsp; (popularity: {props.popularityDesc})&nbsp;
     <a onClick={props.onVote}>Vote</a>
   </li>
 );
 
-export const SnackVoter: React.SFC<SnackVoterProps> = props => {
+export const SnackVoter: (props: SnackVoterProps) => JSX.Element = props => {
   const { snacks, onVote, popularityMode } = props;
 
   const calcPopularity =

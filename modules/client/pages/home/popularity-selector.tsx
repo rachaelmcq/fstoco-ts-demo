@@ -6,7 +6,7 @@ export interface Props {
   readonly onChange: (mode: PopularityMode) => void;
 }
 
-export const PopularitySelector: React.SFC<Props> = props => (
+export const PopularitySelector: (props: Props) => JSX.Element = props => (
   <div className="home-page-pop-mode-toggle">
     <h4>Show popularity as:</h4>
     <div>

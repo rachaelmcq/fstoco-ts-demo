@@ -14,3 +14,5 @@ import "./styles/main.scss";
 import "./components/snack-voter/snack-voter.stories";
 
 import "./pages/home/home-page-ui.stories";
+
+import "./pages/home/popularity-selector.stories.tsx";
