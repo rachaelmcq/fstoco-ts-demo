@@ -3,6 +3,9 @@ import { withContext } from "__tests__/db-helpers";
 describe("SnackRepository", () => {
   it("does things", () => {});
 });
+/* 
+ * Commented these out to focus on the type errors coming from the actual app
+ */
 //   "Can insert and find records",
 //   withContext(async ctx => {
 //     const snack = await ctx.repos.snacks.insert({

@@ -5,6 +5,9 @@ describe("Vote mutation", () => {
   it(
     "Adds a vote for the given snack",
     withContext(async context => {
+      /* 
+       * Commented these out to focus on the type errors coming from the actual app
+       */
       // const graphql = context.apolloClient;
       // const snack = await context.repos.snacks.insert({ name: "Foo" });
       // const result = await voteForSnackMutation(graphql, {

@@ -5,6 +5,9 @@ describe("Dashboard snack query", () => {
   it(
     "Returns snacks with name and vote count",
     withContext(async context => {
+      /* 
+       * Commented these out to focus on the type errors coming from the actual app
+       */
       // const graphql = context.apolloClient;
       // const snack = await context.repos.snacks.insert({
       //   name: "Foo",
